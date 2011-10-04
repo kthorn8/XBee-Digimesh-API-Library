@@ -498,6 +498,10 @@ XBeeAddress64& DMRxResponse::getRemoteAddress64() {
 	return _remoteAddress;
 }
 
+uint8_t DMRxResponse::getRssiOffset() {
+	return DM_RSSI_OFFSET;
+	}
+
 //framedata starts at 1 to account for frame id coming after api id
 void XBeeResponse::getDMRxResponse(XBeeResponse &dmRxResponse) {
 	DMRxResponse* dmRx = static_cast<DMRxResponse*>(&dmRxResponse);

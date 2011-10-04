@@ -116,6 +116,7 @@
 #define RESERVED_1 0xFF
 #define RESERVED_2 0xFE
 #define TX_API_LENGTH 12
+#define DM_RSSI_OFFSET 0
 
 
 /**
@@ -496,6 +497,7 @@ Represents a Series 1 Digimesh RX packet
 class DMRxResponse : public RxResponse {
 public:
 	DMRxResponse();
+	uint8_t getRssiOffset();
 	XBeeAddress64& getRemoteAddress64();
 private:
 	XBeeAddress64 _remoteAddress;
