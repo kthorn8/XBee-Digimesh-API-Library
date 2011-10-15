@@ -116,7 +116,7 @@
 #define RESERVED_1 0xFF
 #define RESERVED_2 0xFE
 #define TX_API_LENGTH 12
-#define DM_RSSI_OFFSET 0
+#define DM_RSSI_OFFSET 8 //no actual RSSI byte in the packet, 2 bytes before data starts
 
 
 /**
